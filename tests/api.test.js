@@ -19,7 +19,9 @@ test('create report',async done=>{
 })
 
 test('get report',async done=>{
-await request(app).get('/report/608ee6373bc85f4fdc6918f6')
-.expect(200)
+await request(app).get('/report/608ebbae6d1c1e0904714a8e')
+.expect(200).then((response)=>{
+    expect(response.body.report.marketId).toBe('market-1')
+})
 done()
 })
