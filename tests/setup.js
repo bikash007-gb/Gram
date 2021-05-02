@@ -13,6 +13,7 @@ jest.setTimeout(600000)
 //     useUnifiedTopology: true
 //   })
 //   .then(() => console.log('DB connection successful!'));
+const DB = process.env.DATABASE.replace('<password>', process.env.DB_PW);
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
