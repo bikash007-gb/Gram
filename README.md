@@ -15,7 +15,7 @@ npm i
 npm start
 ```
 
-### Run rest
+### Run test
 
 ```bash
 npm test
