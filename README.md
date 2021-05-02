@@ -1,7 +1,7 @@
 # Gram
-#Quick Start 🚀
+# Quick Start 🚀
 
-##clone the repo 
+## first clone the repo 
 
 ### Install server dependencies
 
