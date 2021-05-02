@@ -15,14 +15,6 @@ const reportSchema= new mongoose.Schema({
     price:{type:Number}
 },{ timestamps: true })
 
-reportSchema.pre(/^find/, function(next) {
-    this.populate({
-      path: 'userId',
-      select:
-        '-__v '
-    });
-    next();
-  });
 
 const Report = mongoose.model('Report', reportSchema);
 
