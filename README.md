@@ -1,6 +1,7 @@
 # Gram
 #Quick Start 🚀
-clone the repo using [a link](https://github.com/bikash007-gb/Gram.git)
+
+##clone the repo 
 
 ### Install server dependencies
 
