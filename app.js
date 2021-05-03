@@ -5,5 +5,5 @@ const reportRoute = require('./routes/reportRoute')
 const app = express()
 app.use(bodyParser.json())
 
-app.use('/report',reportRoute)
+app.use('/reports',reportRoute)
 module.exports = app;

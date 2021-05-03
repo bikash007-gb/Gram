@@ -32,7 +32,7 @@ npm test
 
 When you run `npm start` the app will be running on `http://localhost:5000/`.
 
-To create a report you have to go to `/report` route, which is a `POST` request. In response you will get
+To create a report you have to go to `/reports` route, which is a `POST` request. In response you will get
 
 ```json
 {
@@ -91,9 +91,9 @@ In response we got
 }
 ```
 
-Now we can view a report with `/report/:reportId` route, which is a `GET` request. In response we will get the report details
+Now we can view a report with `/reports/:reportId` route, which is a `GET` request. In response we will get the report details
 
-lets try this with recently created report `/report/608fa67d543b24326c03e29f`
+lets try this with recently created report `/reports/608fa67d543b24326c03e29f`
 
 In response we got
 
@@ -114,6 +114,14 @@ In response we got
   }
 }
 ```
+
+# Testing APIs 🚀
+
+Testing is done with `jest` and `supertest`.
+
+In create report we are basically checking the status code, for a successful request it should return status code `201`.
+
+In get report we are checking the status code which should be `200` for successful request. And also we are checking the `marketId` and `cmdtyID` which have to be same as the report with that id.
 
 ### Author
 

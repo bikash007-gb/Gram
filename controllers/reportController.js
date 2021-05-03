@@ -1,13 +1,16 @@
 const Report = require('../model/Report')
 
+
+// @route    POST /report
+// @desc     Generate a report
 exports.report= async(req, res, next) =>{
     let {userId,marketId,marketName, cmdtyID,marketType,cmdtyName, priceUnit,convFctr,price}=req.body
     try {
         
     let report = await Report.findOne({$and:[{marketId},{cmdtyID},]})
-    //console.log(report)
+    
     if(!report){
-        //console.log('comming')
+       
         let users=[]
         users.push(userId)
         if(priceUnit!=="kg"){
@@ -37,6 +40,9 @@ exports.report= async(req, res, next) =>{
     }
     
 }
+
+// @route    GET report/:id
+// @desc     Get report by ID
 exports.getReport = async(req,res,next)=>{
     try {
         const report = await Report.findOne({_id:req.params.id}).select('-__v')
