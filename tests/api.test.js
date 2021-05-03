@@ -3,9 +3,9 @@ const request = require('supertest')
 const app = require('../app')
 
 test('create report',async done=>{
-    await request(app).post('/report')
+    await request(app).post('/reports')
     .send({
-        userId:"user-10",
+        userId:"user-50",
     marketId:"market-1",
     marketName:"Vashi Navi Mumbai",
     cmdtyID:"cmdty-1",
@@ -13,15 +13,16 @@ test('create report',async done=>{
     cmdtyName:"potato",
     priceUnit:"Quintal",
     convFctr:60,
-    price:2290
+    price:2190
     }).expect(201)
     done()
 })
 
 test('get report',async done=>{
-await request(app).get('/report/608ebbae6d1c1e0904714a8e')
+await request(app).get('/reports/608ebbae6d1c1e0904714a8e')
 .expect(200).then((response)=>{
     expect(response.body.report.marketId).toBe('market-1')
+    expect(response.body.report.cmdtyID).toBe('cmdty-1')
 })
 done()
 })

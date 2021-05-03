@@ -14,7 +14,7 @@ npm i
 
 ### Start server
 
-To start the server run
+To start the server, run
 
 ```bash
 npm start
@@ -22,7 +22,7 @@ npm start
 
 ### Run test
 
-To run the test run
+To run the test, run
 
 ```bash
 npm test
@@ -119,9 +119,9 @@ In response we got
 
 Testing is done with `jest` and `supertest`.
 
-In create report we are basically checking the status code, for a successful request it should return status code `201`.
+In create report we are basically checking the status code, for a successful `POST` request it should return status code `201`.
 
-In get report we are checking the status code which should be `200` for successful request. And also we are checking the `marketId` and `cmdtyID` which have to be same as the report with that id.
+In get report we are checking the status code which should be `200` for successful `GET` request. And also we are checking the `marketId` and `cmdtyID` which have to be same as the report with that id.
 
 ### Author
 
