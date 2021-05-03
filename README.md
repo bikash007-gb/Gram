@@ -41,7 +41,7 @@ To create a report you have to go to `/report` route, which is a `POST` request.
 }
 ```
 
-Lets see an example. Lets send a request with Postman:
+Lets see an example. Lets send a request with `Postman`:
 
 ```json
 {
