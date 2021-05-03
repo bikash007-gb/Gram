@@ -2,21 +2,27 @@
 
 # Quick Start 🚀
 
-## first clone the repo
+first clone the repo using `git clone https://github.com/bikash007-gb/Gram.git`
 
 ### Install server dependencies
+
+install all dependencies
 
 ```bash
 npm i
 ```
 
-### Run Express
+### Start server
+
+To start the server run
 
 ```bash
 npm start
 ```
 
 ### Run test
+
+To run the test run
 
 ```bash
 npm test
@@ -85,7 +91,7 @@ In response we got
 }
 ```
 
-Now we can view a report with `/report/:reportId` route, which is `GET` request. In response we will get the report details
+Now we can view a report with `/report/:reportId` route, which is a `GET` request. In response we will get the report details
 
 lets try this with recently created report `/report/608fa67d543b24326c03e29f`
 
@@ -108,3 +114,7 @@ In response we got
   }
 }
 ```
+
+### Author
+
+Bikash Mali
