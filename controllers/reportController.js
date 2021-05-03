@@ -3,7 +3,7 @@ const Report = require('../model/Report')
 
 // @route    POST /report
 // @desc     Generate a report
-exports.report= async(req, res, next) =>{
+exports.report= async(req, res) =>{
     let {userId,marketId,marketName, cmdtyID,marketType,cmdtyName, priceUnit,convFctr,price}=req.body
     try {
         
@@ -43,7 +43,7 @@ exports.report= async(req, res, next) =>{
 
 // @route    GET report/:id
 // @desc     Get report by ID
-exports.getReport = async(req,res,next)=>{
+exports.getReport = async(req,res)=>{
     try {
         const report = await Report.findOne({_id:req.params.id}).select('-__v')
     res.status(200).json({
